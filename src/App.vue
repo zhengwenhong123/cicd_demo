@@ -12,7 +12,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <h1>测试cicd</h1>
-  <p>注意事项 base打包路径</p>
+  <p>注意事项 base打包路径/</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
