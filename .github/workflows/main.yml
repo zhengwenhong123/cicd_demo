@@ -28,7 +28,7 @@ jobs:
             branch: gh-pages # 提交分支 
             publish_dir: ./dist
             github_token: ${{ secrets.CICDDEMO }}
-            REMOTE_HOST: ${{secrets.REMOTE_HOST}}AS
+#            REMOTE_HOST: ${{secrets.REMOTE_HOST}}
             user_name: ${{ secrets.MY_USER-NAME }}
             user_email: ${{ secrets.MY-USER-EMAIL }}
             commit-message: "自动部署"
