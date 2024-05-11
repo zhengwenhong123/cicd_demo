@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+const getClick = ()=>{
+  fetch('https://api.roamrover.site/').then(res=>{
+    console.log(res)
+  })
+}
+
 </script>
 
 <template>
@@ -12,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <p>cicd</p>
+  <button @click="getClick">获取接口</button>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
