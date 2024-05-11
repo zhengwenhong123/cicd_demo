@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 
+interface upload{
+  host:string,
+  policy:string,
+  OSSAccessKeyId:string
+  signature:string
+}
 
 const fileUpload = (e:any) => {
-  fetch('https://api.roamrover.site/put').then(res => res.json()).then(res => {
+  fetch('https://api.roamrover.site/put').then(res => res.json()).then((res:upload) => {
     let file = e.target.files[0]
     const formData = new FormData()
     formData.append('key', file.name)
