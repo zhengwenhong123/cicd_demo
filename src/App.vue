@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import HelloWorld from './components/HelloWorld.vue'
 
 
 const fileUpload = (e) => {
-  let result = fetch('https://api.roamrover.site/put').then(res => res.json()).then(res => {
+  fetch('https://api.roamrover.site/put').then(res => res.json()).then(res => {
     let file = e.target.files[0]
     const formData = new FormData()
     formData.append('key', file.name)
@@ -31,7 +31,7 @@ const fileUpload = (e) => {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo"/>
     </a>
   </div>
-  <p>cicd s</p>
+  <p>cicd</p>
   <input type="file" @change="fileUpload">
   <HelloWorld msg="Vite + Vue"/>
 </template>
