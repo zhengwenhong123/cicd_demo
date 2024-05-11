@@ -15,7 +15,7 @@ const fileUpload = (e:any) => {
     formData.append('key', file.name)
     formData.append('policy', res.policy)
     formData.append('OSSAccessKeyId', res.OSSAccessKeyId)
-    // formData.append('success_action_status', 200)
+    formData.append('success_action_status', '200')
     formData.append('signature', res.signature)
     formData.append('file', file)
     fetch(res.host, {
