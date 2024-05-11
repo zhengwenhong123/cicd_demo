@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 
 
-const fileUpload = (e) => {
+const fileUpload = (e:any) => {
   fetch('https://api.roamrover.site/put').then(res => res.json()).then(res => {
     let file = e.target.files[0]
     const formData = new FormData()
