@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 
 
@@ -31,9 +31,9 @@ const fileUpload = (e) => {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo"/>
     </a>
   </div>
-  <p>cicd</p>
-  <HelloWorld msg="Vite + Vue"/>
+  <p>cicd s</p>
   <input type="file" @change="fileUpload">
+  <HelloWorld msg="Vite + Vue"/>
 </template>
 
 <style scoped>
