@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import upload from './components/upload.vue'
+// import upload from './components/upload.vue'
 </script>
 
 <template>
   <p>cicd</p>
-    <img src="../public/panoramic.jpg" style="width: 500px;height: 500px">
-  <upload/>
+  <img src="../public/panoramic.jpg" style="width: 500px;height: 500px">
+<!--  <upload/>-->
 </template>
 
 <style scoped>
