@@ -1,45 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-
-interface upload{
-  host:string,
-  policy:string,
-  OSSAccessKeyId:string
-  signature:string
-}
-
-const fileUpload = (e:any) => {
-  fetch('https://api.roamrover.site/put').then(res => res.json()).then((res:upload) => {
-    let file = e.target.files[0]
-    const formData = new FormData()
-    formData.append('key', file.name)
-    formData.append('policy', res.policy)
-    formData.append('OSSAccessKeyId', res.OSSAccessKeyId)
-    formData.append('success_action_status', '200')
-    formData.append('signature', res.signature)
-    formData.append('file', file)
-    fetch(res.host, {
-      method: 'POST',
-      body: formData
-    })
-  })
-
-
-}
+import upload from './components/upload.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo"/>
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo"/>
-    </a>
-  </div>
   <p>cicd</p>
-  <input type="file" @change="fileUpload">
-  <HelloWorld msg="Vite + Vue"/>
+    <img src="../public/panoramic.jpg" style="width: 500px;height: 500px">
+  <upload/>
 </template>
 
 <style scoped>
