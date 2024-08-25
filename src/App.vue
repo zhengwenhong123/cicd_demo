@@ -4,7 +4,7 @@
 
 <template>
   <p>cicd</p>
-  <img src="../public/panoramic.jpg" style="width: 500px;height: 500px">
+  <img src="../public/images/panoramic.jpg" style="width: 500px;height: 500px">
 <!--  <upload/>-->
 </template>
 
