@@ -1,26 +1,26 @@
-<script setup lang="ts">
-// import upload from './components/upload.vue'
-</script>
-
 <template>
-  <p>cicd</p>
-  <img src="../public/images/panoramic.jpg" style="width: 500px;height: 500px">
-<!--  <upload/>-->
+  <div class="video-container">
+    <video autoplay muted controls
+           src="https://vr-demo.oss-cn-beijing.aliyuncs.com/WeChat_20240909223215.mp4?Expires=1725924792&OSSAccessKeyId=TMP.3KdHmwH6LZQ3U9CQ9bHygh6YZ8Xs2YJpRGXRnuJQiQq4PL43F52W6Tyi9CqpejmfyRJ2Re3d6HckbwfGp3AnYPTBrcdMJR&Signature=Y%2Fyka1qa1kOMrlU%2FHpt7g24YgYw%3D">
+    </video>
+  </div>
 </template>
 
+<script setup>
+
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px; /* Optional styling */
 }
 </style>
